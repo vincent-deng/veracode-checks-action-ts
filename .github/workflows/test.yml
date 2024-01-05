@@ -12,7 +12,7 @@ jobs:
         name: Create Checks Run
         id: create_checks_run
         with:
-          repo: vincentdeng/veracode-checks-action-ts
+          repo: vincent-deng/veracode-checks-action-ts
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Veracode Static Code Analysis
           sha: ${{ github.sha }}
