@@ -1,0 +1,4 @@
+name: Veracode Static Code Analysis
+
+on:
+  push
