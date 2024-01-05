@@ -1,20 +1,20 @@
-name: Veracode Static Code Analysis
+name: Veracode Software Composition Analysis
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
-  create-checks-run:
-    name: Create Checks Run
+  veracode-sca-scan:
     runs-on: ubuntu-latest
+    name: Veracode Component Analysis
+
     steps:
-      - uses: vincent-deng/veracode-checks-action-ts@main
-        name: Create Checks Run
-        id: create_checks_run
+      - uses: actions/checkout@v3
+      - name: Run Veracode SCA
+        env:
+          SRCCLR_API_TOKEN: ${{ secrets.SRCCLR_API_TOKEN }}
+        uses: veracode/veracode-sca@v2.1.9
         with:
-          repo: vincent-deng/veracode-checks-action-ts
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Veracode Static Code Analysis
-          sha: ${{ github.sha }}
-          status: in_progress
-          details_url: https://www.veracode.com
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          create-issues: false  
+          debug: false
