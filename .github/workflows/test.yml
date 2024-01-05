@@ -15,6 +15,6 @@ jobs:
           repo: vincentdeng/veracode-checks-action-ts
           token: '123'
           name: Veracode Static Code Analysis
-          sha: ${{ github.sha }}
+          sha: 'be0dc2992bf6ef3fe20783a9579afdf0be921945'
           status: in_progress
           details_url: https://www.veracode.com

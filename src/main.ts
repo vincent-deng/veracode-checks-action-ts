@@ -5,5 +5,6 @@ export async function run(): Promise<void> {
   // try {
   core.debug('Parsing inputs...');
   const inputs = parseInputs(core.getInput);
+  core.info(`Inputs: ${JSON.stringify(inputs, null, 2)}`);
   // }
 }
