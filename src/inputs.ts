@@ -29,6 +29,6 @@ export const parseInputs = (getInput: GetInput): Inputs.Args => {
     name,
     token,
     status,
-    detailsURL
-  }
-}
+    detailsURL,
+  };
+};

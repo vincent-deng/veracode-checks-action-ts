@@ -15,11 +15,7 @@ export interface ArgsCreate extends ArgsBase {
   name: string;
 }
 
-export interface ArgsUpdate extends ArgsBase {
-  checkID: number;
-}
-
-export type Args = ArgsCreate | ArgsUpdate;
+export type Args = ArgsCreate;
 
 export type Output = {
   title?: string;

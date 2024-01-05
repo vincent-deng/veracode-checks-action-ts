@@ -6,7 +6,7 @@ inputs:
     description: 'the target `owner/repo` to manage the check run on (defaults to the current repository'
     required: false
   sha:
-    description: 'the target commit''s SHA (defaults to the current commit)'
+    description: "the target commit's SHA (defaults to the current commit)"
     required: false
   token:
     description: 'your GITHUB_TOKEN'

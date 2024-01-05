@@ -2,7 +2,7 @@ name: Veracode Static Code Analysis
 
 on:
   workflow_dispatch:
-  
+
 jobs:
   create-checks-run:
     name: Create Checks Run
@@ -13,8 +13,8 @@ jobs:
         id: create_checks_run
         with:
           repo: vincentdeng/veracode-checks-action-ts
-          token: '123'
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: Veracode Static Code Analysis
-          sha: 'be0dc2992bf6ef3fe20783a9579afdf0be921945'
+          sha: ${{ github.sha }}
           status: in_progress
           details_url: https://www.veracode.com

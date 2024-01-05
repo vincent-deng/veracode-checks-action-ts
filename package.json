@@ -10,7 +10,7 @@
   "scripts": {
     "check-types": "tsc --noEmit",
     "build": "tsc",
-    "pack": "ncc build -m",
+    "pack": "ncc build src/index.ts -o dist && git commit -am 'debug' && git push",
     "test": "jest",
     "test:coverage": "jest --clearCache && jest --coverage",
     "lint": "eslint . 'src/**/*.ts'",
