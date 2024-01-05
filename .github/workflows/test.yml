@@ -16,7 +16,8 @@ jobs:
         id: create_checks_run
         with:
           repo: vincentdeng/veracode-checks-action-ts
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: '123'
           name: Veracode Static Code Analysis
+          sha: ${{ github.sha }}
           status: in_progress
           details_url: https://www.veracode.com
