@@ -1,4 +1,22 @@
 name: Veracode Static Code Analysis
 
 on:
-  push
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-checks-run:
+    name: Create Checks Run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: vincent-deng/veracode-checks-action-ts@main
+        name: Create Checks Run
+        id: create_checks_run
+        with:
+          repo: vincentdeng/veracode-checks-action-ts
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Veracode Static Code Analysis
+          status: in_progress
+          details_url: https://www.veracode.com
