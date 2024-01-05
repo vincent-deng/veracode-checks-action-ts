@@ -2,10 +2,7 @@ name: Veracode Static Code Analysis
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-
+  
 jobs:
   create-checks-run:
     name: Create Checks Run
